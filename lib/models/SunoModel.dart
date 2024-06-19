@@ -1,4 +1,4 @@
-class SongClip {
+class SunoClip {
   final String id;
   final String title;
   final String audioUrl;
@@ -6,7 +6,7 @@ class SongClip {
   final String modelName;
   final String status;
 
-  SongClip({
+  SunoClip({
     required this.id,
     required this.title,
     required this.audioUrl,
@@ -15,8 +15,8 @@ class SongClip {
     required this.status,
   });
 
-  factory SongClip.fromJson(Map<String, dynamic> json) {
-    return SongClip(
+  factory SunoClip.fromJson(Map<String, dynamic> json) {
+    return SunoClip(
       id: json['id'],
       title: json['title'],
       audioUrl: json['audio_url'],

@@ -58,8 +58,8 @@ class SunoApi {
 
     if (response.statusCode == 200) {
       final data = jsonDecode(response.body);
-      List<SongClip> clips = (data['clips'] as List)
-          .map((clip) => SongClip.fromJson(clip))
+      List<SunoClip> clips = (data['clips'] as List)
+          .map((clip) => SunoClip.fromJson(clip))
           .toList();
 
       // Check if audio URL is available and return data
@@ -70,7 +70,7 @@ class SunoApi {
     }
   }
 
-  Future<List> _checkForAudioUrl(List<SongClip> clips) async {
+  Future<List> _checkForAudioUrl(List<SunoClip> clips) async {
     List<String> ids = clips.map((clip) => clip.id).toList();
     String joinedIds = ids.join(',');
 
